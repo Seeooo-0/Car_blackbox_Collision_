@@ -1,2 +1,9 @@
 # Car_blackbox_Collision_
-Create an AI model that analyzes the collision situation of the car from the black box image.
+
+1. 프로젝트 이름 : 자동차 블랙박스 충돌 분석
+2. 프로젝트 소개 : 블랙박스 영상으로 부터 자동차의 충돌 상황을 분석하는 모델을 구축하는 것이다.
+3. 프로젝트 동기 : 최근 블랙박스를 활용하여 도로 위에서의 사고를 예방하는 연구가 다양하게 진행되고 있다고 한다. 이에 따라 근래 블랙박스는 위험 상황을 스스로 판단하고, 실시간으로 대처하는 방향으로 발전하고 있는데. 교통사고의 발생과 규모를 큰 폭으로 감소시키고, 향상된 교통 안전 기술을 위해 이러한 프로젝트를 설정하게 되었다.
+4. 데이터 : 블랙박스 영상 데이터로 10개의 프레임으로 되어 있으면 5초 분량이다.
+5. tsak : 13가지의 class로 분류하는 classification문제이다.
+  1. class 세부 정보 : crash, ego-involve, weather, timing 이렇게 4가지로 구분하여 총 13가지의 클래스를 만든다.
+6. 진행하면서 readme를 업데이트 할 예정이다.
