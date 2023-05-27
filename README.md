@@ -16,7 +16,7 @@
     ![image](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/9084370b-eec7-4b76-82b6-2bae3de6009f)
     
     1. class는 총 13개로 아래와 같다.
-    ![image](https://dacon.s3.ap-northeast-2.amazonaws.com/competition/236064/editor-image/1675581601829146.jpeg)
+    ![1675581601829146](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/f0558f52-5f67-4203-a679-263caea3e8cb)
     
     1. 데이터셋을 확인해 보면 데이터 개수가 많이 부족하고 imbalance하다는 것을 알 수 있었다.
         - 이에 영상 augmentation
@@ -31,7 +31,35 @@
     4. slow_r50 (facebookresearch 모델)
     5. slowfast_r50 (facebookresearch 모델)
     6. x3d_s (facebookresearch 모델)
+    - main코드에선 r3_18 모델을 사용했다.
     
 7. 데이터 전처리
-  1. 코드의 
-  - 
+    1. upload한 코드에서 `video_visualization.ipynb` 파일을 확인하면 된다.
+    1. 코드와 같이 labeling을 다시 진행했는데, 그 이유는 crash와 non-crash 데이터 사이의 차이가 매우 크기 때문이다.
+
+8. Loss function
+    1. class imbalance에 robust한 로스는 크게 두가지라 한다.
+        - Focal loss
+        - Asymmetric loss
+        - main 코드에서는 후자를 사용했다.
+
+9. 평가 지표
+    1. F1-score
+    ![image](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/ea3c7c3b-528d-4ce6-9279-67ead6afc40f)
+
+10. 훈련
+    1. 훈련 환경
+        - 처음엔 영상 데이터라 메모리 부족 현상이 잃어나 RTX 2080 Ti로 batch size를 4로 baseline 모델 훈련을 진행했다.
+        - 실제 훈련 시에는 A100-SXM-80GB 로 진행했다. 한 에폭당 train과 validation 합쳐 16~7분 소요됐다.
+    1. 훈련 결과
+        - train loss
+        ![train_loss](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/06a25302-af21-490e-9e6b-83bfcbfaaea9)
+        - validation loss
+        ![validation_loss](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/851aeb4b-65da-43b6-b0c1-e1c7b1fe2000)
+        - f1 score
+        ![f1 score](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/edd9dfae-ba19-40ca-841b-09ff609ee24b)
+        
+11. 
+
+    
+    
