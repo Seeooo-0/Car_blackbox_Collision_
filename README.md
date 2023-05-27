@@ -59,7 +59,11 @@
         - f1 score
             - ![f1 score](https://github.com/Seeooo-0/Car_blackbox_Collision_/assets/90232567/edd9dfae-ba19-40ca-841b-09ff609ee24b)
         
-11. 
+11. 결과
+    - 앞서 훈련한 3가지의 모델을 inference시에 합쳐서 다시 1~13까지의 라벨로 분류하도록 진행했다.
+    - 프로젝트를 진행하면서 아쉬운 점은 video augmentation을 진행하고 싶어 여러가지 라이브러리로 진행해보았다. albumentations, create_video_transform 등 이 있었지만 3가지의 라이브러리 모두 진행에 있어 오류가 나와 transform은 만들어 주지 못했다. 대신 customdataset 자체에서 정규화와 resize만 진행했다.
+    - 또한 dataset의 labeling에 있어 오류가 많아 좋은 성능을 내기 위해선 데이터를 하나하나 확인해가며 labeling을 새로 해줘야 하는 상황이였는데, 그 부분은 진행상 여건이 안돼 하지 못한 점이 아쉽다.
+    - 이번 프로젝트를 진행하면서 wandb와 연동해서 plot을 뽑아보며 많이 사용하는 tool을 다루는 좋은 기회가 되었다.
 
     
     
