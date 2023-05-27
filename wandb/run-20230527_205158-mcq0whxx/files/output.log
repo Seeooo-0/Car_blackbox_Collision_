@@ -1,0 +1,27 @@
+
+
+
+
+
+
+ 15%|███████████████▏                                                                                       | 5/34 [01:05<06:20, 13.12s/it]
+Traceback (most recent call last):
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 330, in <module>
+    infer_model_crashego = train(model_crashego, optimizer, train_crash_ego_loader, val_crash_ego_loader, scheduler, device, 'crash_ego')
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 258, in train
+    for j ,(videos, labels) in enumerate(tqdm(iter(train_loader))):
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 721, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 113, in __getitem__
+    frames = self.get_video(self.video_path_list[idx])
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 135, in get_video
+    _, img = cap.read()
+KeyboardInterrupt

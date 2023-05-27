@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 82%|████████████████████████████████████████████████████████████████████████████████████                  | 28/34 [04:31<00:58,  9.68s/it]
+Traceback (most recent call last):
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 317, in <module>
+    train_weather_loader = DataLoader(train_weather_dataset, batch_size = CFG['batch_size'], shuffle=True, num_workers=0)
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 245, in train
+    def train(model, optimizer, train_loader, val_loader, scheduler, device, label_name):
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 721, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/seobyl/miniconda3/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 100, in __getitem__
+    df_weather = df_weather[df_weather['crash_ego_labels'] != 0] # crash 인 경우 weather 데이터만 사용
+  File "/nas/home/seobyl/CV_project/fortmux.py", line 122, in get_video
+    if self.label_list is not None:
+KeyboardInterrupt
